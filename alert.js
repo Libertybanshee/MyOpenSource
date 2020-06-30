@@ -3,6 +3,7 @@ console.info("Message Nv2");
 console.warn("Message Nv3");
 console.error("Message Max");
 
+console.log(`---> Chapître 2 - Cours 7 <---`)
 document.getElementById('txt').innertHTML = "texte inséré via une command";
 
 var Name = "Zack", Name2 = "Steeve", Data = true, Data2 = undefined, Data3 = function(){};
@@ -76,6 +77,7 @@ else{
     console.log(`Le premier a ${age}ans, vous êtes mineur.`);
 }
 
+console.log(`---> Chapître 4 - Cours 3 <---`)
 /* Question ? valeur si vrai : valeur si faux ;
    ATTENTION --> deux point puis point virgule */
 var age2 = 82;
@@ -90,6 +92,7 @@ else{
     console.log(`la réponse est false`);
 }
 
+console.log(`---> Chapître 4 - Cours 4 <---`)
 var A3 = 1;
 while(A3 <= 10){// Boucle en While
     console.log(`la valeur de A3 est ${A3}`);
@@ -97,11 +100,13 @@ while(A3 <= 10){// Boucle en While
 }
 console.log(`La boucle A3 est terminé !`);
 
+console.log(`---> Chapître 4 - Cours 5 <---`)
 for(var i = 1; i <= 10; i++){// Boucle en FOR
     console.log(`la valeur de i est ${i}`);
 }
 console.log(`La boucle i est terminé !`);
 
+console.log(`---> Chapître 4 - Cours 6 <---`)
 for(var k = 1; k <= 10; k++){// Boucle en FOR
     if(k == 5){
         console.log(`La valeur de k est en pause`)
@@ -111,6 +116,7 @@ for(var k = 1; k <= 10; k++){// Boucle en FOR
 }
 console.log(`La boucle k est terminé !`);
 
+console.log(`---> Chapître 4 - Cours 7 <---`)
 var colors = ["Rouge","Vert","Bleu"];
 var person = {
     prenom : "Steeve",
@@ -124,3 +130,34 @@ for(color in colors){
 for(prop in person){
     console.log(`La valeur de la clé ${prop} est ${person[prop]}`); //Essayer en supprimant "est ${person[prop]}"
 }
+
+console.log(`---> Chapitre 5 - Cours 1 <--- Engender des fonction simples`)
+var a = 2, b = 3, result;
+
+var AddNumbers = function(){
+    result = a + b;
+    console.log(result);
+}
+
+AddNumbers();
+console.log(typeof(AddNumbers));
+
+console.log(`---> Chapitre 5 - Cours 2 <--- Envoie de donnée dans une fonction`)
+var a = 2, b = 3, result;
+
+function AddNumbers2(num1 = 2, num2 = 3){
+    result = num1 + num2;
+    console.log(result);
+}
+
+AddNumbers2(4);// Les variable entre parenthèse sont prioritaire à num1
+AddNumbers2(10, 5);// Pareil ici mais pour num2
+
+console.log(`---> Chapitre 5 - Cours 3 <--- Retourner de donnée dans une fonction`)
+function AddNumbers3(num1 = 2, num2 = 3){
+    var result = num1 + num2;
+    return result;// ICI commande clé: return
+}
+
+var AddNumbers3 = AddNumbers3(10, 5);
+console.log(AddNumbers3);
