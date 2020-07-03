@@ -92,7 +92,7 @@ else{
     console.log(`la réponse est false`);
 }
 
-console.log(`---> Chapître 4 - Cours 4 <---`)
+console.log(`---> Chapître 4 - Cours 4 <---`);
 var A3 = 1;
 while(A3 <= 10){// Boucle en While
     console.log(`la valeur de A3 est ${A3}`);
@@ -100,7 +100,7 @@ while(A3 <= 10){// Boucle en While
 }
 console.log(`La boucle A3 est terminé !`);
 
-console.log(`---> Chapître 4 - Cours 5 <---`)
+console.log(`---> Chapître 4 - Cours 5 <---`);
 for(var i = 1; i <= 10; i++){// Boucle en FOR
     console.log(`la valeur de i est ${i}`);
 }
@@ -116,7 +116,7 @@ for(var k = 1; k <= 10; k++){// Boucle en FOR
 }
 console.log(`La boucle k est terminé !`);
 
-console.log(`---> Chapître 4 - Cours 7 <---`)
+console.log(`---> Chapître 4 - Cours 7 <---`);
 var colors = ["Rouge","Vert","Bleu"];
 var person = {
     prenom : "Steeve",
@@ -131,7 +131,7 @@ for(prop in person){
     console.log(`La valeur de la clé ${prop} est ${person[prop]}`); //Essayer en supprimant "est ${person[prop]}"
 }
 
-console.log(`---> Chapitre 5 - Cours 1 <--- Engender des fonction simples`)
+console.log(`---> Chapitre 5 - Cours 1 <--- Créer des fonction simples`);
 var a = 2, b = 3, result;
 
 var AddNumbers = function(){
@@ -142,7 +142,7 @@ var AddNumbers = function(){
 AddNumbers();
 console.log(typeof(AddNumbers));
 
-console.log(`---> Chapitre 5 - Cours 2 <--- Envoie de donnée dans une fonction`)
+console.log(`---> Chapitre 5 - Cours 2 <--- Envoie de donnée dans une fonction`);
 var a = 2, b = 3, result;
 
 function AddNumbers2(num1 = 2, num2 = 3){
@@ -153,7 +153,7 @@ function AddNumbers2(num1 = 2, num2 = 3){
 AddNumbers2(4);// Les variable entre parenthèse sont prioritaire à num1
 AddNumbers2(10, 5);// Pareil ici mais pour num2
 
-console.log(`---> Chapitre 5 - Cours 3 <--- Retourner de donnée dans une fonction`)
+console.log(`---> Chapitre 5 - Cours 3 <--- Retourner de donnée dans une fonction`);
 function AddNumbers3(num1 = 2, num2 = 3){
     var result = num1 + num2;
     return result;// ICI commande clé: return
@@ -161,3 +161,98 @@ function AddNumbers3(num1 = 2, num2 = 3){
 
 var AddNumbers3 = AddNumbers3(10, 5);
 console.log(AddNumbers3);
+
+console.log(`---> Chapitre 5 - Cours 4 <--- Executer une fonction / Fonction anonyme car sans nom`);
+//IIPE Immediately Invoked Function Execution
+(function(num3, num4){
+    var result = num3 + num4;
+    console.log(result);
+})(2, 4);
+
+console.log(`---> Chapitre 5 - Cours 5 <--- Appréhender les fonction à flèche`);
+//IIPE Immediately Invoked Function Execution
+((num5, num6) => { // ICI commande clé: Autre syntaxe pour écrire une fonction
+    var result = num5 + num6;
+    console.log(result);
+})(7, 8);
+
+console.log(`---> Chapitre 5 - Cours 6 <--- La portée des variable`);
+var result4;
+
+function AddNumbers4(num7 = 2,num8 = 7){
+    var result4;
+    result4 = num7 + num8;
+    console.log(result4); //Déplacer cette ligne incluant la variable result4 pour tester sa portée
+}
+
+AddNumbers4(30, 5); //variable entre parenthère prioritaire
+
+console.log(`---> Chapitre 5 - Cours 7 <--- Remplacer VAR par LET pour déclarer les variables`);
+//L'objectif de ce cours de comparé la portée de VAR et LET 
+function AddNumbers5(num9 = 2,num10 = 7){
+    if(true){
+       let result5 = num9 + num10;
+        console.log(result5); //Déplacer cette commande hors de la condition pour constater la portée de LET comparé a VAR
+    }
+}
+
+AddNumbers5(30, 5); //variable entre parenthère prioritaire
+
+console.log(`---> Chapitre 5 - Cours 6 <--- Utiliser CONST pour déclarer des variables`);
+//L'ojectif de ce cours apprendre l'utilité de l'argument CONST
+const PRENOM2 = "Teddy"; //const signifie constance, déclare des variable qui ne change JAMAIS et doit être écritre en MAJUSCULE
+//const PRENOM2 = "Claude" ;//Si vous activez cette ligne, un erreur apparaitra car 
+
+console.log(PRENOM2);
+
+console.log(`---> Chapitre 6 - Cours 1 <--- Découvrir l'objet MATH`);
+//Ojectif: Apprendre l'utilité de l'argument Math
+let a2 = 2.2, b2 = 6, c2 = 3, myNumber, RNG;
+
+myNumber = Math;//Affiche les possibilité de Math
+RNG = Math.random();//cette fonction attribut un chiffre entre 0 et 1
+
+console.log(myNumber);
+console.log(RNG);
+
+console.log(`---> Chapitre 6 - Cours 2 <--- Travailler avec l'objet DATE`);
+
+let today = new Date();
+let birthday = new Date(1986, 04, 03, 15, 30); // concernant le mois c'est un rey donc indexé à 00 soit 00 = Janviers et 11 = Décembre
+
+console.log(birthday.getDay());// se renseigner sur les argument lié au .get et les objet lié a la date
+
+console.log(`---> Chapitre 6 - Cours 3 <--- Revisiter les chaîne de caractère`);
+//Ojectif: découvrir les possibilité object des chaine de caractère (string)
+let prenom3 = "Mario";
+
+console.log(prenom3.toLocaleUpperCase());// Découvrir les autres possibilité sur W3schools.com 
+
+console.log(`---> Chapitre 6 - Cours 4 <--- Employer l'objet NUMBER`);
+
+let myNumber2;
+
+myNumber2 = 85.8;
+
+console.log(Number.isInteger(myNumber2));// indique si la variable est un chiffre entiers
+console.log(myNumber2.toPrecision(2));// Découvrir les autres possibilité sur W3schools.com 
+
+console.log(`---> Chapitre 6 - Cours 5 <--- Redécouvrir l'objet ARRAY`);
+
+let colors3 = ["Rouge", "Bleu", "Jaune"];
+
+colors3.push("Orange"); //Tester les autres possibilité
+colors3.unshift("Orange"); //Tester les autres possibilité
+
+console.log(colors3.join(` - `));// Découvrir les autres possibilité sur W3schools.com 
+
+console.log(`---> Chapitre 6 - Cours 6 <--- S'initier au BOM`);
+// BOM signifie Browser Object Model
+console.log("Voir le cours vidéo");
+
+console.log(`---> Chapitre 6 - Cours 7 <--- pratiquer BOM`);
+
+console.log(window);
+console.log(window.location);
+console.log(window.navigator);
+console.log(window.document);
