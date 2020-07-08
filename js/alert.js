@@ -330,3 +330,28 @@ txtcss.style.fontSize = 30 ; //Essaie poyr modifier la taille d'écriture
 console.log(txtcss);
 
 console.log(`---> Chapitre 8 - Cours 1 <--- Préparer un script pour afficher une image`);
+// Prépration des dossier suite dans le fichier randomimage.js
+
+console.log(`---> Chapitre 8 - Cours 2 <--- Comprendre JSON (support manquant vidéo a revoir)`);
+// Découvrir l'utiliser JSON pour décoder les longues chaîne de caractères
+// variable = `[{très longue chaine de caractère}]`
+// la commande JSON.parse(variable)
+
+let ImageFond = document.getElementById(`mainHeader`);
+
+console.log(`---> Chapitre 8 - Cours 3 <--- choisir un élément aléatoire dans un objet ARRAY (support manquant vidéo a revoir)`);
+// Créer un système de sélection aléatoire
+
+let randomimage2 = Math.floor(Math.random() * 5);// ICI commande clé code final est image.[Math.floor(Math.random() * 13)];
+
+console.log(randomimage2);
+
+console.log(`---> Chapitre 8 - Cours 4 <--- afficher une image aléatoire (ristourne trouver)`);
+// Ecrire le code de sélection et affichage
+
+ImageFond.style.backgroundImage = `url(/image/image-${randomimage2}.jpg)`;// ICI commande clé pour afficher le fichier
+
+console.log(`url(/image/image-${randomimage2}.jpg)`);// ICI commande clé pour sélectionner le fichier
+
+console.log(`---> Chapitre 8 - Cours 5 <--- Vider un élément de son contenu`);
+//
