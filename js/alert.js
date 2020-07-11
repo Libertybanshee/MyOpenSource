@@ -354,4 +354,27 @@ ImageFond.style.backgroundImage = `url(/image/image-${randomimage2}.jpg)`;// ICI
 console.log(`url(/image/image-${randomimage2}.jpg)`);// ICI commande clé pour sélectionner le fichier
 
 console.log(`---> Chapitre 8 - Cours 5 <--- Vider un élément de son contenu`);
+// Découvrir la commande et procedé p
+
+let picInfo = document.getElementById('picInfo');
+while(picInfo.firstChild){
+    picInfo.removeChild(picInfo.firstChild)
+};
+
+console.log(picInfo); //Commande clé entre les ligne 359 à 361, transformer la commande en commentaire pour comprendre
+
+console.log(`---> Chapitre 8 - Cours 6 <--- Affichez du contenu`);
+// Objectif: Créer des éléments textes, (revoir le cours vidéo pour afficher un texte aléatoire)
+
+let picTitle = document.createElement(`h1`);
+let picTitleContent = document.createTextNode(`BILOBIBLO`);
+picTitle.appendChild(picTitleContent);
+picInfo.appendChild(picTitle);
+
+console.log(picTitle);
+
+console.log(`---> Chapitre 8 - Cours 7 <--- Appliquez le script sur les autres pages`);
+// Cas particulier revoir le cour vidéo, pas vraiment d'ajout
+
+console.log(`---> Chapitre 9 - Cours 1 <--- `);
 //
