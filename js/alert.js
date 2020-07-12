@@ -376,5 +376,23 @@ console.log(picTitle);
 console.log(`---> Chapitre 8 - Cours 7 <--- Appliquez le script sur les autres pages`);
 // Cas particulier revoir le cour vidéo, pas vraiment d'ajout
 
-console.log(`---> Chapitre 9 - Cours 1 <--- `);
-//
+console.log(`---> Chapitre 9 - Cours 1 <--- Comprendre le rôle des évènements (voir le cour vidéo)`);
+// Comprendre comment on s'y prendre
+
+console.log(`---> Chapitre 9 - Cours 2 <--- Réagir à des évènements (voir le cour vidéo)`);
+// 
+
+console.log(`---> Chapitre 9 - Cours 3 <--- Utiliser addEventListener`);
+// Découvrir l'argument AddEventListener 
+
+let galImages = document.querySelectorAll(`#singleGallery img`);
+
+for (let i = 0; i < galImages.length; i++){
+    let image = galImages[i];
+    image.addEventListener(`click`, () => {alert(`Bonjour, image non déclarez !`)}, false);
+    image.addEventListener(`click`, () => {alert(`apprend juste le code`)}, false);
+}
+
+console.log(galImages);
+
+console.log(`---> Chapitre 9 - Cours 4 <--- Inspecter les propriétés des évènements`);
