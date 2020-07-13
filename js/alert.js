@@ -391,8 +391,63 @@ for (let i = 0; i < galImages.length; i++){
     let image = galImages[i];
     image.addEventListener(`click`, () => {alert(`Bonjour, image non déclarez !`)}, false);
     image.addEventListener(`click`, () => {alert(`apprend juste le code`)}, false);
+    image.addEventListener(`click`, showSinglePict, false);
 }
 
 console.log(galImages);
 
+// Code du Chapitre 9 Cours 7
+window.addEventListener(`load`,() => {
+    let galleriesRaw = `{Grande et Longue chaîne de caractère venant d'un serveur}`;
+    /*let galleries = JSON.parse(galleriesRaw);
+    console.log(galleries);*/
+
+// Code du Chapitre 9 Cours 8
+    let searchParams = new URLSearchParams(window.location.search);
+
+    /*if(searchParams.has(`id`)){
+        let galId = searchParams.get(`id`);
+        console.log(galId);
+    } else {
+        window.location.pathname = 'Opensource.html';
+    }*/
+
+    console.log(searchParams.has(`id`));
+    console.log(window.location);
+    alert(`page chargé`);
+},false);
+
 console.log(`---> Chapitre 9 - Cours 4 <--- Inspecter les propriétés des évènements`);
+// une autre méthode pour utiliser les évènements et la fenêtre inspection
+
+function showSinglePict(e){
+    alert(`apprend cette 2ieme façon de coder`);
+    console.log(e);
+    let imageE = e.target;
+    // Code du cours Chapître 9 Cours 5
+    let imageContainer = document.getElementById(`galleryContainer`);
+    let bigImage = imageContainer.querySelector(`img`);
+    bigImage.src = imageE.src;
+    imageContainer.classList.toggle(`visible`);
+    imageContainer.addEventListener(`click`, closeSinglePict, false);
+}
+
+function closeSinglePict(){
+    let imageContainer = document.getElementById(`galleryContainer`);
+    imageContainer.classList.toggle(`visible`);
+}
+
+console.log(`---> Chapitre 9 - Cours 5 <--- Utiliser l'évènement CLICK`);
+// Suite du code dans le chapitre précedént, utiliser l'évènement CLICK pour aggrandir une image
+
+console.log(`---> Chapitre 9 - Cours 6 <--- Animer des éléments avec CSS et Javascript`);
+// créer un transition en douceur de l'agrandissement d'image
+
+console.log(`---> Chapitre 9 - Cours 7 <--- Employer ONLOAD`);
+// Suite du code dans le chapitre 9 cours 3, découvrir l'objet window
+
+console.log(`---> Chapitre 9 - Cours 8 <--- récupérer les données l'URL `);
+// Suite du code dans le chapitre 9 cours 3, redirection de page en cas d'erreur
+
+console.log(`---> Chapitre 9 - Cours 9 <--- Afficher les galeris de photos (voir le cour vidéo)`);
+// code final en screenshot, instruction mais inutile car le HTML & CSS suffit
