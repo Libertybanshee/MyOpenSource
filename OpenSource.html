@@ -4,6 +4,7 @@
 	<title>Ressource Public</title>
 	<script src="js/alert.js" defer></script>
 	<script src="js/randomimage.js" defer></script>
+	<script src="js/contactForm.js" defer></script>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body id="mainHeader">
@@ -51,6 +52,34 @@
 			<li>Liste 2</li>
 			<li>Liste 3</li>
 		</ul>
+	</div>
+	<div id="Formulaire-Contact">
+		<h1>Contactez-nous !</h1>
+		<p>Merci de compléter le formulaire suivant pour nous contacter.</br>
+			Tous les champs doivent être remplis</p>
+		<form id="frmContact" action="merci.html" novalidate>
+			<div id="leftCol">
+				<div>
+					<label for="fName">Prénom</label>
+					<input type="text" name="fName" id="fName" required>
+				</div>
+				<div>
+					<label for="lName">Nom</label>
+					<input type="text" name="lName" id="lName" required>
+				</div>
+				<div>
+					<label for="eMail">E-mail</label>
+					<input type="email" name="email" id="email" required>
+				</div>
+			</div>
+			<div id="rightCol">
+				<div>
+					<label for="message">Votre Message</label>
+					<textarea id="message" name="message" required></textarea>
+				</div>
+			</div>
+			<button type="submit">Envoyer</button>
+		</form>
 	</div>
 </footer>
 <figure id="galleryContainer"><img src=""></figure>

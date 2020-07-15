@@ -414,7 +414,7 @@ window.addEventListener(`load`,() => {
 
     console.log(searchParams.has(`id`));
     console.log(window.location);
-    alert(`page chargé`);
+    //alert(`page chargé`);
 },false);
 
 console.log(`---> Chapitre 9 - Cours 4 <--- Inspecter les propriétés des évènements`);
@@ -451,3 +451,47 @@ console.log(`---> Chapitre 9 - Cours 8 <--- récupérer les données l'URL `);
 
 console.log(`---> Chapitre 9 - Cours 9 <--- Afficher les galeris de photos (voir le cour vidéo)`);
 // code final en screenshot, instruction mais inutile car le HTML & CSS suffit
+
+console.log(`---> Chapitre 9 - Cours 10 <--- Utiliser ONSUBMIT et preventDefault()`);
+// découvrir l'argument lié au formulaire et annulé une action Onsubmit pour validez, preventdefault() pour annuler
+
+let contactForm = document.getElementById(`frmContact`);
+
+contactForm.addEventListener(`submit`, (a) => {
+    a.preventDefault();
+    alert(`Votre mail est envoyé`);
+
+    // Code du cours Chapître 9 Cours 5
+    let fields = document.querySelectorAll(`input[required], textarea[required]`);
+    console.log(fields);
+
+}, false);
+
+console.log(`---> Chapitre 9 - Cours 11 <--- Se servir des timers`);
+// Découvrir les argument lié au timer
+
+setTimeout(() => {
+    console.log(`Bonjour décalé de 5s`);
+}, 5000);
+
+// ATTENTION LOOP
+/*setInterval(() => {
+    console.log(`ca va en répétition de 1s`);
+}, 1000);*/
+
+let interval = setInterval(() => {
+    console.log(`ca va en répétition de 1s`);
+}, 1000);
+
+setTimeout(() => { //Stop le timer
+    clearInterval(interval);
+}, 5500);
+
+console.log(`---> Chapitre 10 - Cours 1 <--- Appréhender la validation des formulaires (voir le cour vidéo)`);
+//Explication du formulaire côté client
+
+console.log(`---> Chapitre 10 - Cours 2 <--- la valider automatiquement les navigateurs`);
+//découvrir la commande required et la testé sur divers navigateur
+
+console.log(`---> Chapitre 10 - Cours 3 <--- Désactiver la validation automatique du formulaire`);
+//découvrir la commande novalidate 
