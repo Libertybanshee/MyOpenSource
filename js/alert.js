@@ -459,13 +459,49 @@ let contactForm = document.getElementById(`frmContact`);
 
 contactForm.addEventListener(`submit`, (a) => {
     a.preventDefault();
-    alert(`Votre mail est envoyé`);
+   // alert(`Votre mail est envoyé`);
 
-    // Code du cours Chapître 9 Cours 5
+    // Code du cours Chapître 10 Cours 3
     let fields = document.querySelectorAll(`input[required], textarea[required]`);
-    console.log(fields);
+    
+     // Code du cours Chapître 10 Cours 6
+    fields.forEach((field) => {resetField(field)});
 
+    // Code du cours Chapître 10 Cours 4
+    let valid = true;
+
+    fields.forEach((field) => {
+        if(! validateField(field)){
+            valid = false;
+        }
+    });
+    if(valid){
+        a.target.submit();
+    }
+
+    console.log(fields); //fields avec S pour sélectionné en groupe
 }, false);
+
+function validateField(field){
+    if(field.checkValidity()){
+        return true;
+    } else {
+      // Code du cours Chapître 10 Cours 5
+        field.classList.add(`invalid`);
+        field.previousElementSibling.insertAdjacentHTML(`beforeend`, `<span class="msg">${field.validationMessage}</span>`);
+        return false;
+    }
+};
+
+// Code du cours Chapître 10 Cours 6
+function resetField(field){
+    let fieldLabel = field.previousElementSibling;
+    field.classList.remove(`invalid`);
+    while(fieldLabel.firstElementChild){
+        fieldLabel.removeChild(fieldLabel.firstElementChild);
+    }
+    field.valid = true;
+};
 
 console.log(`---> Chapitre 9 - Cours 11 <--- Se servir des timers`);
 // Découvrir les argument lié au timer
@@ -494,4 +530,16 @@ console.log(`---> Chapitre 10 - Cours 2 <--- la valider automatiquement les navi
 //découvrir la commande required et la testé sur divers navigateur
 
 console.log(`---> Chapitre 10 - Cours 3 <--- Désactiver la validation automatique du formulaire`);
-//découvrir la commande novalidate 
+//Suite du code dans le chapitre 9 cours 10 découvrir la commande novalidate sur le formulaire du code HTML
+
+console.log(`---> Chapitre 10 - Cours 4 <--- Valider côté client en JavaScript (cours technique a revoir)`);
+//Suite du code dans le chapitre 9 cours 10 Explication et finalisation du formulaire 
+
+console.log(`---> Chapitre 10 - Cours 5 <--- Générer des messages d'erreur (cours technique a revoir)`);
+//Suite du code dans le chapitre 9 cours 10 Afficher les message d'erreur partie 1/2
+
+console.log(`---> Chapitre 10 - Cours 6 <--- Permettre plusieurs validations (cours technique a revoir)`);
+//Suite du code dans le chapitre 9 cours 10 Afficher les message d'erreur partie 2/2
+
+console.log(`---> Chapitre 10 - Cours 7 <--- Permettre plusieurs validations (cours technique a revoir)`);
+//Suite du code dans le chapitre 9 cours 10 Afficher les message d'erreur partie 2/2
