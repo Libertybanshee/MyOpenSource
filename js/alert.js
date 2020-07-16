@@ -457,12 +457,20 @@ console.log(`---> Chapitre 9 - Cours 10 <--- Utiliser ONSUBMIT et preventDefault
 
 let contactForm = document.getElementById(`frmContact`);
 
+// Code du cours Chapître 10 Cours 7
+let fields = document.querySelectorAll(`input[required], textarea[required]`);
+
+fields.forEach((field) => {
+    field.addEventListener(`focus`, () => {resetField(field)}, false);
+    field.addEventListener(`blur`, () => {validateField(field)}, false);
+});
+
 contactForm.addEventListener(`submit`, (a) => {
     a.preventDefault();
    // alert(`Votre mail est envoyé`);
 
     // Code du cours Chapître 10 Cours 3
-    let fields = document.querySelectorAll(`input[required], textarea[required]`);
+    //let fields = document.querySelectorAll(`input[required], textarea[required]`);
     
      // Code du cours Chapître 10 Cours 6
     fields.forEach((field) => {resetField(field)});
@@ -536,10 +544,21 @@ console.log(`---> Chapitre 10 - Cours 4 <--- Valider côté client en JavaScript
 //Suite du code dans le chapitre 9 cours 10 Explication et finalisation du formulaire 
 
 console.log(`---> Chapitre 10 - Cours 5 <--- Générer des messages d'erreur (cours technique a revoir)`);
-//Suite du code dans le chapitre 9 cours 10 Afficher les message d'erreur partie 1/2
+//Suite du code dans le chapitre 9 cours 10 Afficher les message d'erreur partie 1/3
 
 console.log(`---> Chapitre 10 - Cours 6 <--- Permettre plusieurs validations (cours technique a revoir)`);
-//Suite du code dans le chapitre 9 cours 10 Afficher les message d'erreur partie 2/2
+//Suite du code dans le chapitre 9 cours 10 Afficher les message d'erreur partie 2/3
 
-console.log(`---> Chapitre 10 - Cours 7 <--- Permettre plusieurs validations (cours technique a revoir)`);
-//Suite du code dans le chapitre 9 cours 10 Afficher les message d'erreur partie 2/2
+console.log(`---> Chapitre 10 - Cours 7 <--- Utiliser ONFOCUS et ONBLUR (cours technique a revoir)`);
+//Suite du code dans le chapitre 9 cours 10 Afficher les message d'erreur partie 3/3
+
+console.log(`---> Chapitre 11 - Cours 1 <--- Parcourir les bibliothèques JavaScript (voir le cour vidéo)`);
+//appréhention des bibliothèques
+
+console.log(`---> Chapitre 11 - Cours 2 <--- intégrer jQuery à son site (voir le cour vidéo)`);
+//connaitre les version de jQuery et l'implanter dans notre code
+
+console.log(`---> Chapitre 11 - Cours 3 <--- Créer un menu déroulant avec jQuery (voir le cour vidéo)`);
+//
+
+$
