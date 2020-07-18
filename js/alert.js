@@ -354,7 +354,7 @@ ImageFond.style.backgroundImage = `url(/image/image-${randomimage2}.jpg)`;// ICI
 console.log(`url(/image/image-${randomimage2}.jpg)`);// ICI commande clé pour sélectionner le fichier
 
 console.log(`---> Chapitre 8 - Cours 5 <--- Vider un élément de son contenu`);
-// Découvrir la commande et procedé p
+// Découvrir la commande et procedé 
 
 let picInfo = document.getElementById('picInfo');
 while(picInfo.firstChild){
@@ -467,7 +467,7 @@ fields.forEach((field) => {
 
 contactForm.addEventListener(`submit`, (a) => {
     a.preventDefault();
-   // alert(`Votre mail est envoyé`);
+    alert(`Votre mail est envoyé`);
 
     // Code du cours Chapître 10 Cours 3
     //let fields = document.querySelectorAll(`input[required], textarea[required]`);
