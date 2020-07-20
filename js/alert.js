@@ -559,6 +559,10 @@ console.log(`---> Chapitre 11 - Cours 2 <--- intégrer jQuery à son site (voir 
 //connaitre les version de jQuery et l'implanter dans notre code
 
 console.log(`---> Chapitre 11 - Cours 3 <--- Créer un menu déroulant avec jQuery (voir le cour vidéo)`);
-//
+//Découvrir l'objet Jquery $
 
-$
+$(document).ready(function(){
+    $(`#menuToggle`).click(function(){
+        $(`#mainNav`).slideToggle();
+    });
+});

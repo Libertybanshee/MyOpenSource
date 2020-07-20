@@ -17,7 +17,7 @@
     width: 100%;
     top: 40px;
     padding-bottom: 10px;
-    display: none;
+    display: ;
     
 }
 
@@ -25,11 +25,11 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    height: 40px;
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    height: 40px;
-    align-items: center;
 }
 
 #mainNav a{
@@ -42,8 +42,8 @@
 }
 
 #menuToggle{
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     background-color: transparent;
     border: none;
 }
@@ -88,9 +88,14 @@
 
     #mainNav{
         position: static;
-        background-color: transparent;
+        background-color: white;
         display: block;
     }
+
+    #main ul{
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (min-width: 1024px){
