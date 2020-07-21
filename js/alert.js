@@ -563,6 +563,6 @@ console.log(`---> Chapitre 11 - Cours 3 <--- Créer un menu déroulant avec jQue
 
 $(document).ready(function(){
     $(`#menuToggle`).click(function(){
-        $(`#mainNav`).slideToggle();
+        $(`#mainNav`).stop(true, true).slideToggle();
     });
 });
